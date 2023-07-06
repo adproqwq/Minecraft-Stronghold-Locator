@@ -7,13 +7,13 @@ struct tCoor
 tCoor a[10];
 int main()
 {
-	cout<<"欢迎使用要塞定位器，该版本是：1.0.1"<<endl;
+	cout<<"欢迎使用要塞定位器，该版本是：1.0.2"<<endl;
 	cout<<"作者：Adpro"<<endl<<endl<<endl;
 	cout<<"请输入当前坐标（游戏坐标的第一个和第三个数）：";
 	cin>>a[0].x>>a[0].y;
 	cout<<"请输入末影之眼掉落坐标：";
 	cin>>a[1].x>>a[1].y;
-	cout<<"请离开当前位置至少100格，离开越远，误差越小"<<endl<<"请输入当前坐标（游戏坐标的第一个和第三个数）：";
+	cout<<"请离开当前位置至少100格（不要超过1000格），离开越远，误差越小"<<endl<<"请输入当前坐标（游戏坐标的第一个和第三个数）：";
 	cin>>a[2].x>>a[2].y;
 	cout<<"请输入末影之眼掉落坐标：";
 	cin>>a[3].x>>a[3].y;
@@ -29,7 +29,8 @@ int main()
 	else if(a[5].b<0) oppob=~((int)a[5].b-1);
 	double n=(oppob+a[4].b)/(a[5].k-a[4].k);
 	double m=a[4].k*n+a[4].b;
-	cout<<"末地要塞的坐标大约是："<<ceil(n)<<" "<<ceil(m)<<endl<<"仅供参考，可在到达后多丢几次眼";
+	cout<<"末地要塞的坐标大约是："<<ceil(n)<<" "<<ceil(m)<<endl<<"仅供参考，可在到达后多丢几次眼"<<endl;
+	system("Pause");
 	
 	return 0;
 }
